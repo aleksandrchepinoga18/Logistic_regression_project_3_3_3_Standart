@@ -61,18 +61,6 @@
 
 - ## Анализ средних значений предсказаний
 
-### Результаты предсказаний
-```python
-print("Predictions after one-hot encoding:", y_pred_one_hot.mean())
-print("Predictions after MinMaxScaler:", y_pred_minmax.mean())             
-print("Predictions after StandardScaler:", y_pred_standard.mean())
-print("Predictions after RobustScaler:", y_pred_robust.mean())
-
-Predictions after one-hot encoding: 0.37055837563451777
-Predictions after MinMaxScaler: 0.38578680203045684
-Predictions after StandardScaler: 0.3756345177664975
-Predictions after RobustScaler: 0.37055837563451777
-
 ## Интерпретация результатов
 
 ### Что такое `y_pred.mean()`?
@@ -82,6 +70,7 @@ Predictions after RobustScaler: 0.37055837563451777
 - `y_pred.mean()` вычисляет среднее значение этого массива. Поскольку метки могут быть только 0 или 1, среднее значение показывает **долю предсказанных выживших (1)** в тестовой выборке.
 
 ### Интерпретация результатов:
+
 1. **Predictions after one-hot encoding: 0.370**
    - Это означает, что модель предсказала, что **37.06%** пассажиров в тестовой выборке выжили.
 
@@ -162,3 +151,15 @@ Predictions after RobustScaler: 0.37055837563451777
 
 ## Заключение
 Проект демонстрирует процесс обработки данных, обучения модели логистической регрессии и оценки ее качества. Наилучший результат был достигнут без нормализации данных и с использованием RobustScaler. Модель может быть использована для предсказания выживания пассажиров на основе их характеристик.
+
+### Результаты предсказаний
+```python
+print("Predictions after one-hot encoding:", y_pred_one_hot.mean())
+print("Predictions after MinMaxScaler:", y_pred_minmax.mean())             
+print("Predictions after StandardScaler:", y_pred_standard.mean())
+print("Predictions after RobustScaler:", y_pred_robust.mean())
+
+Predictions after one-hot encoding: 0.37055837563451777
+Predictions after MinMaxScaler: 0.38578680203045684
+Predictions after StandardScaler: 0.3756345177664975
+Predictions after RobustScaler: 0.37055837563451777
